@@ -1,0 +1,8 @@
+tensorcircuit-ng
+numpy
+scipy
+tensorflow
+jax
+jaxlib
+optax
+cotengra
