@@ -265,19 +265,22 @@ def execute_ppa_sp_2d(params):
 # define lattice and circuit depth for scan
 Lx, Ly = 2, 2
 scan_layers = [2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# k for LWPP initialization
 scan_k = [2, 3]
 
 iterations = 1500
 ncircuits = 30
 
 
-# define ferromagnetic('m') model or antiferromagnetic model('p')
+# Model type: 'm' for ferromagnetic, 'p' for antiferromagnetic
 # mp = 'p'
 mp = "m"
 
-# define initilization parameters('rd' for random and 'nz' for near-identity)
+# Initialization: 'nz' for near-zero (identity), 'rd' for random
 ini = "nz"
 # ini = 'rd'
+
 
 
 if mp == "m":

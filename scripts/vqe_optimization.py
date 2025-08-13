@@ -50,7 +50,7 @@ def train_step(param, opt_state):
 Lx, Ly = 3, 3
 scan_layers = [2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# k for lwpp initilization(k = 0 for direct initlization)
+# k for LWPP initialization (k=0 denotes direct initialization)
 scan_k = [0, 2, 3]
 
 # nc0 is the number of circuits of the lwpp-initialized parameters
@@ -58,11 +58,11 @@ nc0 = 30
 ncircuits = 30
 iterations = 1500
 
-# define ferromagnetic('m') model or antiferromagnetic model('p')
+# Model type: 'm' for ferromagnetic, 'p' for antiferromagnetic
 # mp = 'p'
 mp = "m"
 
-# define initilization parameters('rd' for random and 'nz' for near-identity)
+# Initialization: 'nz' for near-zero (identity), 'rd' for random
 ini = "nz"
 # ini = 'rd'
 
@@ -136,12 +136,12 @@ for layers_i in range(len(scan_layers)):
         scan_loss[k_i, layers_i, :] = list_of_loss
         if k == 0:
             np.save(
-                f"../data/loss_set_{ini}/loss_{mp}_{ini}_nc{ncircuits}_l{num_layers}_n{Lx}{Ly}",
+                f"../data/loss_set_{mp}_{ini}/loss_{mp}_{ini}_nc{ncircuits}_l{num_layers}_n{Lx}{Ly}",
                 list_of_loss,
             )
         else:
             np.save(
-                f"../data/loss_set_{ini}/loss_{mp}_{ini}_k{k}_nc{ncircuits}_l{num_layers}_n{Lx}{Ly}.npy",
+                f"../data/loss_set_{mp}_{ini}/loss_{mp}_{ini}_k{k}_nc{ncircuits}_l{num_layers}_n{Lx}{Ly}.npy",
                 list_of_loss,
             )
         # print(f"k = {k}     num_layers = {num_layers}")
