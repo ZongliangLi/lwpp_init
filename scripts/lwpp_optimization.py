@@ -300,7 +300,7 @@ for k_i in range(len(scan_k)):
     for layers_i in range(len(scan_layers)):
         k = scan_k[k_i]
         num_layers = scan_layers[layers_i]
-        print(f"k = {k}, layers = {num_layers}")
+        # print(f"k = {k}, layers = {num_layers}")
 
         execute_ppa_vvag_jit = K.jit(
             tc.backend.vvag(execute_ppa_sp_2d, vectorized_argnums=0)
