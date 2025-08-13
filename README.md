@@ -6,4 +6,4 @@ This repository contains the implementation of Low-Weigth Pauli Propagation init
 
 # Installation
 
-This work is based on the infrastructure by [TensorCircuit-NG](https://github.com/tensorcircuit/tensorcircuit-ng).
+This work is based on the infrastructure enabled by [TensorCircuit-NG](https://github.com/tensorcircuit/tensorcircuit-ng).
