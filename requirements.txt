@@ -2,7 +2,6 @@ tensorcircuit-ng
 numpy
 scipy
 tensorflow
-jax
-jaxlib
+jax[cuda12]
 optax
 cotengra

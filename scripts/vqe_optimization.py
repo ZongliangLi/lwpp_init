@@ -48,7 +48,7 @@ def train_step(param, opt_state):
 
 # define lattice and circuit depth for scan
 Lx, Ly = 3, 3
-scan_layers = [2, 3]
+scan_layers = [2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 # k for lwpp initilization(k = 0 for direct initlization)
 scan_k = [0, 2, 3]
@@ -144,7 +144,7 @@ for layers_i in range(len(scan_layers)):
                 f"../data/loss_set/loss_{mp}_{ini}_k{k}_nc{ncircuits}_l{num_layers}_n{Lx}{Ly}.npy",
                 list_of_loss,
             )
-        print(f"k = {k}     num_layers = {num_layers}")
+        # print(f"k = {k}     num_layers = {num_layers}")
 
 
 
